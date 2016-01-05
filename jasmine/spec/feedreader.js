@@ -15,7 +15,7 @@ $(function() {
         it('URL defined', function() {
             for(var i = 0; i < allFeeds.length; i++){
                 expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toBe(0);
+                expect(allFeeds[i].url.length).not.toBe(0);
             }
         });
 
@@ -24,7 +24,7 @@ $(function() {
         it('names defined', function() {
             for(var i = 0; i < allFeeds.length; i++){
                 expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name).not.toBe(0);
+                expect(allFeeds[i].name.length).not.toBe(0);
             }
          });
     });
@@ -90,19 +90,21 @@ $(function() {
         // for each .feed we get the html and assign it to
         // a unique variable that we declared in the outer scope.
         beforeEach(function(done){
-
             loadFeed(0, function(){
                 feed0 = $('.feed').html();
-            });
-
-            loadFeed(1, function(){
-                feed1 = $('.feed').html();
                 done();
             });
         });
 
+        beforeEach(function(done){
+            loadFeed(1, function(){
+                feed1 = $('.feed').html();
+                done();
+            });             
+        });
+
         // After specs are run we will load the default feed.
-        afterEach(function(done) {
+        afterAll(function(done) {
             loadFeed(0, done);
         });
 
@@ -112,6 +114,11 @@ $(function() {
         // the second feed truly changes the content
         // if the first feed is not equal to the second feed.
         it('new feed changes content', function(){
+            console.log('typeof feed0 ===' + typeof feed0);
+            console.log('typeof feed1 ===' + typeof feed1);
+            console.log(feed0);
+            console.log(feed1);
+
             expect(feed0).not.toEqual(feed1);
         });
     });
