@@ -73,7 +73,7 @@ $(function() {
         // entry loaded by seeing if the amount of entries is
         // greater than 0.
         it('loads atleast one entry', function(){
-             var entries = $('.feed .entry').length;
+            var entries = $('.feed .entry').length;
             expect(entries).toBeGreaterThan(0);
         });
     });
