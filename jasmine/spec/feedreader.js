@@ -72,10 +72,9 @@ $(function() {
         // This spec will check if there is atleast one
         // entry loaded by seeing if the amount of entries is
         // greater than 0.
-        it('loads atleast one entry', function(done){
+        it('loads atleast one entry', function(){
              var entries = $('.feed .entry').length;
             expect(entries).toBeGreaterThan(0);
-            done();
         });
     });
 
