@@ -12,8 +12,8 @@ Open feedreader.js to see the test suites that I've written.
 
 ### Thoughts on this project
 
-I look forward to more Test Driven Development. I like how constructing test suites can build my confidence in  developing solid and bug free application.
+I look forward to more Test Driven Development. With Javascript testing, I feel I can approach development feeling confident in a solid and bug free application.
 
 ## Skills
 
-- Learned to Test Driven Development use a Jasmine.js.
+- Understand Test Driven Development using a Jasmine.js.
