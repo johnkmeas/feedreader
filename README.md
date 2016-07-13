@@ -1,7 +1,9 @@
 # Feed Reader
 Udacity provided the feedreader application and I had to write some tests run against it.
 
-#### How to run this application
+### How to run this application
+
+#### Clone respository
 In terminal run `$ git clone https://github.com/johnkmeas/feedreader.github.io.git`
 
 #### Open in Browser
